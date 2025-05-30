@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - H.B.D. Pharma</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --salem-50: #effef6;
+            --salem-100: #dbfdec;
+            --salem-200: #b8fad8;
+            --salem-300: #81f4bb;
+            --salem-400: #43e595;
+            --salem-500: #1bcc75;
+            --salem-600: #10a95e;
+            --salem-700: #10844c;
+            --salem-800: #12693f;
+            --salem-900: #115636;
+            --salem-950: #03301c;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: var(--salem-800) !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--salem-700) !important;
+            font-weight: 500;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--salem-600) !important;
+        }
+
+        .navbar-nav .nav-link.active {
+            color: var(--salem-500) !important;
+        }
+
+        .section-title {
+            color: var(--salem-800);
+            border-bottom: 3px solid var(--salem-400);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .footer {
+            background-color: var(--salem-950);
+            color: var(--salem-100);
+        }
+
+        /* Enhanced Timeline Styles */
+        .timeline-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        .timeline-line {
+            position: absolute;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--salem-400), var(--salem-600));
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            width: 100%;
+        }
+
+        .timeline-content {
+            position: relative;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            width: 45%;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: 0;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 55%;
+            text-align: left;
+        }
+
+        .timeline-date {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--salem-500), var(--salem-600));
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 15px rgba(27, 204, 117, 0.3);
+        }
+
+        .timeline-title {
+            color: var(--salem-800);
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .timeline-node {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--salem-500);
+            border: 4px solid white;
+            border-radius: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 2rem;
+            z-index: 10;
+            box-shadow: 0 4px 15px rgba(27, 204, 117, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover .timeline-node {
+            background: var(--salem-400);
+            transform: translateX(-50%) scale(1.2);
+        }
+
+        .timeline-arrow {
+            position: absolute;
+            top: 2rem;
+            width: 0;
+            height: 0;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-arrow {
+            right: -15px;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 15px solid white;
+        }
+
+        .timeline-item:nth-child(even) .timeline-arrow {
+            left: -15px;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-right: 15px solid white;
+        }
+
+        /* Responsive Timeline */
+        @media (max-width: 768px) {
+            .timeline-line {
+                left: 30px;
+            }
+
+            .timeline-content {
+                width: calc(100% - 80px);
+                margin-left: 60px !important;
+                text-align: left !important;
+            }
+
+            .timeline-node {
+                left: 30px;
+            }
+
+            .timeline-arrow {
+                display: none;
+            }
+        }
+
+        /* Hero Section for About Page */
+        .about-hero {
+            background: linear-gradient(135deg, var(--salem-50) 0%, var(--salem-100) 100%);
+            padding: 4rem 0 2rem;
+        }
+
+        .stats-card {
+            background: linear-gradient(135deg, var(--salem-500), var(--salem-600));
+            color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(27, 204, 117, 0.3);
+        }
+
+        .product-grid .card {
+            height: 100%;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .product-grid .card:hover {
+            background: var(--salem-50);
+        }
+
+        .product-grid .fas {
+            font-size: 1.5rem;
+            color: var(--salem-600);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fs-3" href="index.html">H.B.D. PHARMA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#services">Our Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#products">Product Line</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-4" style="color: var(--salem-800);">About H.B.D. Pharma</h1>
+                    <p class="lead mb-4">Established in 1987, H.B.D. Pharma has emerged as one of India's most trusted pharmaceutical wholesalers, operating from Delhi, Bhagirath Palace — Asia's largest medicine market.</p>
+                    <p class="mb-0">With over three decades of proven reliability, we have grown into a nationally recognised name, supplying comprehensive healthcare solutions across India.</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="stats-card">
+                        <h2 class="display-3 fw-bold mb-2">38+</h2>
+                        <h5 class="mb-2">Years of Excellence</h5>
+                        <p class="mb-0">Three generations strong, trusted by healthcare providers since 1987</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card p-4 h-100">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-bullseye fa-3x" style="color: var(--salem-600);"></i>
+                        </div>
+                        <h4 class="text-center mb-3" style="color: var(--salem-700);">Our Mission</h4>
+                        <p class="text-center">To be India's most trusted pharmaceutical wholesaler, ensuring healthcare accessibility and affordability across the nation while maintaining the highest standards of quality and service excellence.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card p-4 h-100">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-eye fa-3x" style="color: var(--salem-600);"></i>
+                        </div>
+                        <h4 class="text-center mb-3" style="color: var(--salem-700);">Our Vision</h4>
+                        <p class="text-center">To revolutionize pharmaceutical distribution in India by bridging the gap between manufacturers and healthcare providers, ensuring every patient has access to life-saving medicines when they need them most.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Timeline -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Our Journey Through Time</h2>
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-arrow"></div>
+                        <div class="timeline-date">1987</div>
+                        <h4 class="timeline-title">Foundation & Early Beginnings</h4>
+                        <p class="timeline-description">H.B.D. Pharma was established in Delhi's Bhagirath Palace, Asia's largest medicine market. Started as a small pharmaceutical wholesaler with a vision to serve the healthcare community with integrity and reliability.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-arrow"></div>
+                        <div class="timeline-date">1990s</div>
+                        <h4 class="timeline-title">Expansion & Diversification</h4>
+                        <p class="timeline-description">Expanded our product range to include surgical supplies, hospital essentials, and medical equipment. Built strong relationships with leading pharmaceutical manufacturers and established our reputation for quality and timely delivery.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-arrow"></div>
+                        <div class="timeline-date">2000s</div>
+                        <h4 class="timeline-title">Specialized Healthcare Solutions</h4>
+                        <p class="timeline-description">Introduced specialized oncology medicines and super-specialty drugs. Became a trusted partner for hospitals and clinics requiring critical and hard-to-find medications, particularly in cancer treatment and rare disease management.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-arrow"></div>
+                        <div class="timeline-date">2010s</div>
+                        <h4 class="timeline-title">Nationwide Network</h4>
+                        <p class="timeline-description">Established a comprehensive nationwide delivery network, enabling us to serve clients from metros to remote towns across India. Implemented advanced logistics and inventory management systems for efficient operations.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-arrow"></div>
+                        <div class="timeline-date">Present</div>
+                        <h4 class="timeline-title">Industry Leadership</h4>
+                        <p class="timeline-description">Today, H.B.D. Pharma stands as a leading pharmaceutical wholesaler with 38+ years of excellence. We continue to innovate and adapt, maintaining our commitment to healthcare accessibility while embracing modern distribution technologies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Provide -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">What We Provide</h2>
+            <div class="row product-grid g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card p-4 text-center h-100">
+                        <i class="fas fa-capsules mb-3"></i>
+                        <h6>Ethical & Generic Medicines</h6>
+                        <p class="small text-muted mb-0">Comprehensive range of prescription and generic pharmaceuticals</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card p-4 text-center h-100">
+                        <i class="fas fa-leaf mb-3"></i>
+                        <h6>Homeopathic & Ayurvedic</h6>
+                        <p class="small text-muted mb-0">Traditional and alternative medicine solutions</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card p-4 text-center h-100">
+                        <i class="fas fa-user-md mb-3"></i>
+                        <h6>Surgical Supplies</h6>
+                        <p class="small text-muted mb-0">Quality surgical instruments and medical supplies</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card p-4 text-center h-100">
+                        <i class="fas fa-hospital mb-3"></i>
+                        <h6>Hospital Essentials</h6>
+                        <p class="small text-muted mb-0">Complete range of hospital and clinical essentials</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card p-4 text-center h-100">
+                        <i class="fas fa-microchip mb-3"></i>
+                        <h6>Medical Electronics</h6>
+                        <p class="small text-muted mb-0">Advanced medical electronic components and devices</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card p-4 text-center h-100">
+                        <i class="fas fa-spa mb-3"></i>
+                        <h6>Medical Cosmetics</h6>
+                        <p class="small text-muted mb-0">Dermatological and cosmetic healthcare products</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card p-4 text-center h-100">
+                        <i class="fas fa-shopping-basket mb-3"></i>
+                        <h6>FMCG & OTC</h6>
+                        <p class="small text-muted mb-0">Fast-moving consumer goods and over-the-counter medicines</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card p-4 text-center h-100">
+                        <i class="fas fa-syringe mb-3"></i>
+                        <h6>Vaccines & Supplements</h6>
+                        <p class="small text-muted mb-0">Immunization vaccines and nutritional supplements</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Focus -->
+    <section class="py-5" style="background: linear-gradient(135deg, var(--salem-50), var(--salem-100));">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="card p-4 border-0 shadow-lg">
+                        <div class="row align-items-center">
+                            <div class="col-md-2 text-center">
+                                <i class="fas fa-ribbon fa-4x" style="color: var(--salem-600);"></i>
+                            </div>
+                            <div class="col-md-10">
+                                <h4 style="color: var(--salem-800);">Special Focus: Cancer Medicines</h4>
+                                <p class="mb-0">We maintain a specialized inventory of oncology drugs and cancer treatment medicines, ensuring availability of life-saving treatments. Our mission is to support the fight against cancer by improving access, affordability, and awareness, contributing our bit to save countless lives every day.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="stats-card">
+                        <i class="fas fa-heart fa-3x mb-3"></i>
+                        <h4>Saving Lives</h4>
+                        <p class="mb-0">Dedicated to making life-saving medicines accessible to all</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h3 class="text-white mb-3">H.B.D. PHARMA</h3>
+                    <p>Empowering Healthcare Since 1987. Your trusted partner in pharmaceutical wholesale distribution across India.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-instagram fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="text-white mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
+                        <li><a href="index.html#services" class="text-light text-decoration-none">Services</a></li>
+                        <li><a href="index.html#products" class="text-light text-decoration-none">Products</a></li>
+                        <li><a href="index.html#contact" class="text-light text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-white mb-3">Our Products</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">Ethical Medicines</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Generic Drugs</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Oncology Medicines</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Surgical Supplies</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Ayurvedic Products</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5 class="text-white mb-3">Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Bhagirath Palace, Delhi</p>
+                    <p><i class="fas fa-phone me-2"></i> +91-XXXXXXXXXX</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@hbdpharma.com</p>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: var(--salem-600);">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 H.B.D. Pharma. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-light text-decoration-none me-3">Terms of Service</a>
+                    <a href="#" class="text-light text-decoration-none">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Scroll Animation Script -->
+    <script>
+        // Animate timeline items on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Initialize timeline animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const timelineItems = document.querySelectorAll('.timeline-content');
+            timelineItems.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(50px)';
+                item.style.transition = 'all 0.6s ease';
+                observer.observe(item);
+            });
+        });
+    </script>
+</body>
+</html>
