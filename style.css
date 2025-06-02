@@ -118,16 +118,19 @@
 .moving-brands {
     overflow: hidden;
     white-space: nowrap;
+    position: relative;
 }
 
 .moving-brands-content {
     display: inline-block;
     animation: scroll 30s linear infinite;
+    position: relative;
+    left: 0;
 }
 
 @keyframes scroll {
-    0% { transform: translate3d(100%, 0, 0); }
-    100% { transform: translate3d(-100%, 0, 0); }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
 }
 
 .brand-logo {
@@ -137,4 +140,10 @@
     background: white;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.brand-logo img {
+    width: 250px;
+    height: 80px;
+    object-fit: contain;
 }
