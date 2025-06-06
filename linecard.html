@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Card - H.B.D. Pharma</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --salem-50: #effef6;
+            --salem-100: #dbfdec;
+            --salem-200: #b8fad8;
+            --salem-300: #81f4bb;
+            --salem-400: #43e595;
+            --salem-500: #1bcc75;
+            --salem-600: #10a95e;
+            --salem-700: #10844c;
+            --salem-800: #12693f;
+            --salem-900: #115636;
+            --salem-950: #03301c;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: var(--salem-800) !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--salem-700) !important;
+            font-weight: 500;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--salem-600) !important;
+        }
+
+        .navbar-nav .nav-link.active {
+            color: var(--salem-500) !important;
+        }
+
+        .section-title {
+            color: var(--salem-800);
+            border-bottom: 3px solid var(--salem-400);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .brand-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            height: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0.5rem;
+        }
+
+        .brand-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .brand-logo {
+            max-width: 100%;
+            height: auto;
+            max-height: 80px;
+            object-fit: contain;
+        }
+
+        .footer {
+            background-color: var(--salem-950);
+            color: var(--salem-100);
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--salem-50) 0%, var(--salem-100) 100%);
+            padding: 4rem 0 2rem;
+        }
+
+        .brands-page {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -0.5rem;
+        }
+
+        .brands-page .col-lg-3 {
+            padding: 0.5rem;
+        }
+
+        /* Pagination Styling */
+        .pagination .page-link {
+            color: var(--salem-700);
+            border-color: var(--salem-200);
+            background-color: white;
+        }
+
+        .pagination .page-link:hover {
+            color: var(--salem-600);
+            background-color: var(--salem-50);
+            border-color: var(--salem-300);
+        }
+
+        .pagination .page-item.active .page-link {
+            background-color: var(--salem-500);
+            border-color: var(--salem-500);
+            color: white;
+        }
+
+        .pagination .page-item.active .page-link:hover {
+            background-color: var(--salem-600);
+            border-color: var(--salem-600);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fs-3" href="index.html">H.B.D. PHARMA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#services">Product & Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="linecard.html">Line Card</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-4 fw-bold mb-4" style="color: var(--salem-800);">Our Partner Brands</h1>
+                    <p class="lead mb-0">We are proud to be associated with leading pharmaceutical companies, ensuring the highest quality healthcare products for our customers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Grid -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row" id="brands-container">
+                <!-- Page 1 -->
+                <div class="brands-page" data-page="1">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Sun_Pharma.png" alt="Sun Pharma" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Mankind.png" alt="Mankind" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Cipla.png" alt="Cipla" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Abbott.png" alt="Abbott" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Cadila.png" alt="Cadila Pharmaceuticals" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Intas.png" alt="Intas" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Glenmark.png" alt="Glenmark" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Aristo.png" alt="Aristo" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Lee_Ford.png" alt="Leeford" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Sanofi.png" alt="Sanofi" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Himalaya.png" alt="Himalaya" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Lupin.png" alt="Lupin" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Ranbaxy.png" alt="Ranbaxy" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Zydus.png" alt="Zydus" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Dr._Reddy's_Laboratories.png" alt="Dr. Reddy's Laboratories" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Alkem.png" alt="Alkem" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Torrent.png" alt="Torrent" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Emcure.png" alt="Emcure" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Micro_Labs.png" alt="Micro Labs" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Novartis.png" alt="Novartis" class="brand-logo">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 2 -->
+                <div class="brands-page" data-page="2" style="display: none;">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Pfizer.png" alt="Pfizer" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/GSK.png" alt="GSK" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Bayer.png" alt="Bayer" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Astra_Zeneca.png" alt="Astra Zeneca" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Roche.png" alt="Roche" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Merck_&_Co.png" alt="Merck & Co" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Eli_Lilly_and_Company.png" alt="Eli Lilly and Company" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Boehringer_Ingelheim.png" alt="Boehringer Ingelheim" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Serum_Institute_of_India.png" alt="Serum Institute of India" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Bharat_Biotech.png" alt="Bharat Biotech" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Biocon.png" alt="Biocon" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Dr_Morepen.png" alt="Dr. Morepen" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/FDC.png" alt="FDC" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/GlaxoSmithKline.png" alt="GlaxoSmithKline" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Gleufic.png" alt="Gleufic" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Group_Pharmaceuticals.png" alt="Group Pharmaceuticals" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/ICPA_Health.png" alt="ICPA Health" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/IPCA_Laboratories.png" alt="IPCA Laboratories" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/JB Chemicals & Pharmaceuticals.png" alt="JB Chemicals & Pharmaceuticals" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Janssen.png" alt="Janssen" class="brand-logo">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 3 -->
+                <div class="brands-page" data-page="3" style="display: none;">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Macleods.png" alt="Macleods" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Martin_&_Harris.png" alt="Martin & Harris" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Micro_Labs.png" alt="Micro Labs" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Natco.png" alt="Natco" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Neon_Laboratories.png" alt="Neon Laboratories" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Novo_Nordisk.png" alt="Novo Nordisk" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Organic_India.png" alt="Organic India" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Otsira.png" alt="Otsira" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Proctor_&_Gamble.png" alt="Proctor & Gamble" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/RPG.png" alt="RPG" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Raprakos.png" alt="Raprakos" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Sapient_Laboratories.png" alt="Sapient Laboratories" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Serdia.png" alt="Serdia" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Steadfast_Medishield.png" alt="Steadfast Medishield" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Systopic.png" alt="Systopic" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Takeda.png" alt="Takeda" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/UCB.png" alt="UCB" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/USV.png" alt="USV" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Win-Medicare.png" alt="Win-Medicare" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Wockhardt.png" alt="Wockhardt" class="brand-logo">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 4 -->
+                <div class="brands-page" data-page="4" style="display: none;">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Zandu.png" alt="Zandu" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="brand-card">
+                            <img src="images/logos/Zuventis.png" alt="Zuventis" class="brand-logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <nav aria-label="Brand pagination">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item active">
+                                <a class="page-link" href="#" data-page="1">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" data-page="2">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" data-page="3">3</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" data-page="4">4</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h3 class="text-white mb-3">H.B.D. PHARMA</h3>
+                    <p class="lead">Empowering Healthcare Since 1987. Your trusted partner in pharmaceutical wholesale distribution across India.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-instagram fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="text-white mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none lead">Home</a></li>
+                        <li><a href="about.html" class="text-light text-decoration-none lead">About Us</a></li>
+                        <li><a href="index.html#services" class="text-light text-decoration-none lead">Services</a></li>
+                        <li><a href="index.html#products" class="text-light text-decoration-none lead">Products</a></li>
+                        <li><a href="index.html#contact" class="text-light text-decoration-none lead">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-white mb-3">Our Products</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none lead">Ethical Medicines</a></li>
+                        <li><a href="#" class="text-light text-decoration-none lead">Generic Drugs</a></li>
+                        <li><a href="#" class="text-light text-decoration-none lead">Oncology Medicines</a></li>
+                        <li><a href="#" class="text-light text-decoration-none lead">Surgical Supplies</a></li>
+                        <li><a href="#" class="text-light text-decoration-none lead">Ayurvedic Products</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5 class="text-white mb-3">Contact Info</h5>
+                    <p class="lead"><i class="fas fa-map-marker-alt me-2"></i> 1520/6, Jagsonpal Market, Bhagirath Palace, Chandni Chowk, Delhi- 110006</p>
+                    <p class="lead"><i class="fas fa-phone me-2"></i> General: 011-43584774, Vipin Setya: +91-9810362527, Anirrudh Setya: +91-8800422246</p>
+                    <p class="lead"><i class="fas fa-envelope me-2"></i> hbdpharma@gmail.com</p>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: var(--salem-600);">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 lead">&copy; 2025 H.B.D. Pharma. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3 lead">Privacy Policy</a>
+                    <a href="#" class="text-light text-decoration-none me-3 lead">Terms of Service</a>
+                    <a href="#" class="text-light text-decoration-none lead">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Pagination Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const pages = document.querySelectorAll('.brands-page');
+            const paginationLinks = document.querySelectorAll('.pagination .page-link');
+            
+            function showPage(pageNumber) {
+                // Hide all pages
+                pages.forEach(page => {
+                    page.style.display = 'none';
+                });
+                
+                // Show selected page
+                const selectedPage = document.querySelector(`.brands-page[data-page="${pageNumber}"]`);
+                if (selectedPage) {
+                    selectedPage.style.display = 'flex';
+                    selectedPage.style.flexWrap = 'wrap';
+                }
+                
+                // Update pagination active state
+                paginationLinks.forEach(link => {
+                    link.parentElement.classList.remove('active');
+                    if (link.getAttribute('data-page') === pageNumber.toString()) {
+                        link.parentElement.classList.add('active');
+                    }
+                });
+            }
+            
+            // Add click event listeners to pagination links
+            paginationLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const pageNumber = this.getAttribute('data-page');
+                    showPage(pageNumber);
+                });
+            });
+            
+            // Show first page by default
+            showPage(1);
+        });
+    </script>
+</body>
+</html> 
