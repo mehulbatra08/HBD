@@ -59,6 +59,40 @@
         }
 
         /* Rest of your existing styles */
+        .moving-brands {
+            overflow: hidden;
+            width: 100%;
+            background: none;
+            padding: 1.5rem 0;
+        }
+        .moving-brands-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            animation: scrollBrands 30s linear infinite;
+            width: max-content;
+        }
+        .moving-brands .brand-logo {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80px;
+            min-width: 120px;
+        }
+        .moving-brands .brand-logo img {
+            max-height: 70px;
+            width: auto;
+            filter: grayscale(0.2) contrast(1.1);
+            transition: filter 0.3s;
+        }
+        .moving-brands .brand-logo img:hover {
+            filter: none;
+        }
+        @keyframes scrollBrands {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
     </style>
 </head>
 <body>
@@ -73,7 +107,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#services">Product & Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Product & Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="linecard.html">Line Card</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                 </ul>
@@ -188,6 +222,21 @@
         <div class="container">
             <div class="moving-brands">
                 <div class="moving-brands-content">
+                    <div class="brand-logo"><img src="images/logos/Sun_Pharma.png" alt="Sun Pharma"></div>
+                    <div class="brand-logo"><img src="images/logos/Mankind.png" alt="Mankind"></div>
+                    <div class="brand-logo"><img src="images/logos/Cipla.png" alt="Cipla"></div>
+                    <div class="brand-logo"><img src="images/logos/Abbott.png" alt="Abbott"></div>
+                    <div class="brand-logo"><img src="images/logos/Cadila.png" alt="Cadila Pharmaceuticals"></div>
+                    <div class="brand-logo"><img src="images/logos/Intas.png" alt="Intas"></div>
+                    <div class="brand-logo"><img src="images/logos/Glenmark.png" alt="Glenmark"></div>
+                    <div class="brand-logo"><img src="images/logos/Aristo.png" alt="Aristo"></div>
+                    <div class="brand-logo"><img src="images/logos/Lee_Ford.png" alt="Leeford"></div>
+                    <div class="brand-logo"><img src="images/logos/Sanofi.png" alt="Sanofi"></div>
+                    <div class="brand-logo"><img src="images/logos/Himalaya.png" alt="Himalaya"></div>
+                    <div class="brand-logo"><img src="images/logos/Lupin.png" alt="Lupin"></div>
+                    <div class="brand-logo"><img src="images/logos/Ranbaxy.png" alt="Ranbaxy"></div>
+                    <div class="brand-logo"><img src="images/logos/Zydus.png" alt="Zydus"></div>
+                    <!-- Duplicate logos for seamless loop -->
                     <div class="brand-logo"><img src="images/logos/Sun_Pharma.png" alt="Sun Pharma"></div>
                     <div class="brand-logo"><img src="images/logos/Mankind.png" alt="Mankind"></div>
                     <div class="brand-logo"><img src="images/logos/Cipla.png" alt="Cipla"></div>

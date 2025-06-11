@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products & Services - H.B.D. Pharma</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --salem-50: #effef6;
+            --salem-100: #dbfdec;
+            --salem-200: #b8fad8;
+            --salem-300: #81f4bb;
+            --salem-400: #43e595;
+            --salem-500: #1bcc75;
+            --salem-600: #10a95e;
+            --salem-700: #10844c;
+            --salem-800: #12693f;
+            --salem-900: #115636;
+            --salem-950: #03301c;
+        }
+
+        .product-section {
+            padding: 4rem 0;
+        }
+
+        .product-section:nth-child(even) {
+            background-color: var(--salem-50);
+        }
+
+        .product-icon {
+            font-size: 2.5rem;
+            color: var(--salem-600);
+            margin-bottom: 1rem;
+        }
+
+        /* New style for product images within product sections */
+        .product-section img {
+            max-width: 80%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Hero Section Styles */
+        .hero-section {
+            position: relative;
+            background-color: var(--salem-50);
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            padding: 4rem 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--salem-800);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            color: var(--salem-950);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fs-3" href="index.html">H.B.D. PHARMA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="products.html">Products & Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="linecard.html">Line Card</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto text-center hero-content">
+                    <h1 class="hero-title">Products & Services</h1>
+                    <p class="hero-subtitle">Delivering Excellence in Healthcare Solutions</p>
+                    <div class="mt-4">
+                        <p class="lead" style="color: var(--salem-950);">At H.B.D. Pharma, we recognize that healthcare solutions must be as diverse and dynamic as the patients they serve — and so is our supply portfolio. With over 38 years of industry experience, we have built lasting partnerships with pharmacies, hospitals, clinics, and wellness providers across India.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <p class="lead mb-4">Our commitment lies in sourcing only high-quality, fully compliant products from licensed manufacturers and ensuring their timely and reliable distribution. We take pride in being a trusted link in the healthcare supply chain — delivering precision, consistency, and peace of mind to every client we serve.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Sections -->
+    <section class="product-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-pills product-icon"></i>
+                        <h2 class="mb-4">Prescription & Generic Medicines</h2>
+                    </div>
+                    <p class="lead">We procure a wide range of ethical and generic medicines that are trusted by healthcare professionals across India. Each product is sourced from licensed, reputable manufacturers and meets stringent quality and regulatory standards.</p>
+                    <p class="lead">Whether supporting day-to-day treatments or managing chronic conditions, we help ensure timely access to safe, effective, and affordable medicines — delivered with the consistency and care our clients rely on.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/products/prescription.png" alt="Prescription Medicines">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-heartbeat product-icon"></i>
+                        <h2 class="mb-4">Oncology & Super-Specialty Medicines</h2>
+                    </div>
+                    <p class="lead">Cancer care demands precision, urgency, and compassion — and we approach it with the seriousness it deserves. At H.B.D. Pharma, we procure and distribute a critical range of oncology and super-specialty medicines, including targeted therapies, life-saving injectables, and essential support drugs.</p>
+                    <p class="lead">Our processes ensure secure sourcing, proper handling, and robust cold-chain logistics — minimizing delays and safeguarding product integrity. We work closely with healthcare providers to help ensure that patients receive the treatments they need, when they need them most.</p>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <img src="images/products/oncology.png" alt="Oncology Medicines">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-leaf product-icon"></i>
+                        <h2 class="mb-4">Ayurvedic and Homeopathic Remedies</h2>
+                    </div>
+                    <p class="lead">Rooted in India's rich medical heritage, ayurvedic and homeopathic treatments continue to play an important role in modern healthcare. At H.B.D. Pharma, we offer a thoughtfully selected range of certified remedies that blend time-tested traditions with today's quality and safety standards.</p>
+                    <p class="lead">Each product is ensured with purity, efficacy, and consistency — supporting holistic treatment plans with natural, patient-focused options.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/products/Ayurvedic.png" alt="Ayurvedic Remedies">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-hospital product-icon"></i>
+                        <h2 class="mb-4">Surgical & Hospital Supplies</h2>
+                    </div>
+                    <p class="lead">We support healthcare professionals in maintaining safe, sterile, and well-equipped clinical environments by offering a reliable selection of surgical and hospital essentials. Our catalogue includes disposables, IV sets, gloves, wound care products, PPE, and other critical supplies.</p>
+                    <p class="lead">All items are sourced from verified manufacturers and delivered with speed and accuracy, helping our partners focus on patient care without supply interruptions.</p>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <img src="images/products/surgical.png" alt="Surgical Supplies">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-microchip product-icon"></i>
+                        <h2 class="mb-4">Medical Electronic Components</h2>
+                    </div>
+                    <p class="lead">Modern healthcare relies on precision — and the technology behind it. We provide essential electronic components and devices that support diagnostics, monitoring, and treatment systems in clinical settings.</p>
+                    <p class="lead">From ECG parts and nebulizer units to sensors and monitoring equipment, each item is tested for performance and reliability. Our goal is to help healthcare facilities stay equipped with the tools they need to deliver accurate, timely care.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/products/medical_electronics.png" alt="Medical Electronics">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-spa product-icon"></i>
+                        <h2 class="mb-4">Medical Cosmetics & Therapeutic Skincare</h2>
+                    </div>
+                    <p class="lead">Post-treatment care and dermatological health require products that are both effective and safe. At H.B.D. Pharma, we offer a curated selection of medicated cosmetics and therapeutic skincare solutions — trusted by dermatologists, clinics, and wellness professionals.</p>
+                    <p class="lead">From formulations that support skin recovery to treatments used in cosmetology and chronic skin conditions, each product is selected for its clinical efficacy, safety profile, and regulatory compliance.</p>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <img src="images/products/medical_cosmetics.png" alt="Medical Cosmetics">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-shopping-cart product-icon"></i>
+                        <h2 class="mb-4">FMCG & OTC Products</h2>
+                    </div>
+                    <p class="lead">Everyday health and wellness rely on accessible, over-the-counter solutions. We offer a dependable selection of fast-moving consumer healthcare goods and OTC essentials — including hygiene products, pain relief, antiseptics, wellness supplements, and more.</p>
+                    <p class="lead">Our goal is to help pharmacies, retailers, and clinics meet daily public demand with quality-assured products that are ready when needed — backed by efficient distribution and trusted sourcing.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/products/fmcg.png" alt="FMCG Products">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-capsules product-icon"></i>
+                        <h2 class="mb-4">Supplements & Nutraceuticals</h2>
+                    </div>
+                    <p class="lead">Preventive care and long-term wellness often begin with the right nutritional support. At H.B.D. Pharma, we offer a well-researched range of supplements and nutraceuticals — including essential vitamins, immune boosters, protein formulations, and condition-specific blends.</p>
+                    <p class="lead">Sourced from certified manufacturers and trusted by healthcare professionals, our products are designed to complement treatment plans, promote recovery, and support overall well-being.</p>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <img src="images/products/supplements.png" alt="Supplements">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-syringe product-icon"></i>
+                        <h2 class="mb-4">Vaccines</h2>
+                    </div>
+                    <p class="lead">Vaccination is one of the most vital pillars of public health — and we treat its distribution with the care it demands. H.B.D. Pharma supplies a broad range of routine and specialty vaccines, including pediatric, adult, and travel-related immunizations.</p>
+                    <p class="lead">With stringent cold-chain protocols, verified sourcing, and precise handling, we ensure vaccine integrity from manufacturer warehouse to point of care — supporting timely immunization and community protection across all age groups.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/products/vaccine.png" alt="Vaccines">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commitment Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="mb-4">Our Commitment</h2>
+                    <p class="lead mb-4">At H.B.D. Pharma, we do more than deliver healthcare products — we uphold a responsibility to those who care for others. Every item we procure and distribute reflects our dedication to quality, reliability, and long-term partnership.</p>
+                    <p class="lead mb-4">Our clients trust us not just for what we provide, but for how we operate: with integrity, responsiveness, and a deep understanding of the critical role we play in the healthcare ecosystem. As needs evolve, we remain committed to growing with our partners — consistently, carefully, and with purpose.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h3 class="text-white mb-3">H.B.D. PHARMA</h3>
+                    <p class="lead">Empowering Healthcare Since 1987. Your trusted partner in pharmaceutical wholesale distribution across India.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-instagram fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="text-white mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none lead">Home</a></li>
+                        <li><a href="about.html" class="text-light text-decoration-none lead">About Us</a></li>
+                        <li><a href="products.html" class="text-light text-decoration-none lead">Products & Services</a></li>
+                        <li><a href="linecard.html" class="text-light text-decoration-none lead">Line Card</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none lead">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-white mb-3">Our Products</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none lead">Ethical Medicines</a></li>
+                        <li><a href="#" class="text-light text-decoration-none lead">Generic Drugs</a></li>
+                        <li><a href="#" class="text-light text-decoration-none lead">Oncology Medicines</a></li>
+                        <li><a href="#" class="text-light text-decoration-none lead">Surgical Supplies</a></li>
+                        <li><a href="#" class="text-light text-decoration-none lead">Ayurvedic Products</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5 class="text-white mb-3">Contact Info</h5>
+                    <p class="lead"><i class="fas fa-map-marker-alt me-2"></i> 1520/6, Jagsonpal Market, Bhagirath Palace, Chandni Chowk, Delhi- 110006</p>
+                    <p class="lead"><i class="fas fa-phone me-2"></i> General: 011-43584774, Vipin Setya: +91-9810362527, Anirrudh Setya: +91-8800422246</p>
+                    <p class="lead"><i class="fas fa-envelope me-2"></i> hbdpharma@gmail.com</p>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: var(--salem-600);">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 lead">&copy; 2025 H.B.D. Pharma. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3 lead">Privacy Policy</a>
+                    <a href="#" class="text-light text-decoration-none me-3 lead">Terms of Service</a>
+                    <a href="#" class="text-light text-decoration-none lead">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

@@ -50,6 +50,7 @@
             padding: 2rem;
             height: 100%;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            flex: 1;
         }
 
         .contact-info-card:hover {
@@ -61,6 +62,12 @@
             color: var(--salem-500);
             font-size: 1.5rem;
             margin-bottom: 1rem;
+        }
+
+        .form-control {
+            width: 100%;
+            box-sizing: border-box;
+            resize: none;
         }
 
         .form-control:focus {
@@ -103,7 +110,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#services">Product & Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products & Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="linecard.html">Line Card</a></li>
                     <li class="nav-item"><a class="nav-link active" href="contact.html">Contact Us</a></li>
                 </ul>
@@ -127,6 +134,55 @@
     <section class="py-5">
         <div class="container">
             <div class="row g-4 d-flex">
+                <!-- Contact Information -->
+                <div class="col-lg-5 d-flex">
+                    <div class="contact-info-card h-100">
+                        <h3 class="mb-4">Contact Information</h3>
+                        <div class="mb-4">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h5>Address</h5>
+                            <p class="lead mb-0">1520/6, Jagsonpal Market,</p>
+                            <p class="lead mb-0">Bhagirath Palace, Chandni Chowk,</p>
+                            <p class="lead mb-0">Delhi- 110006</p>
+                        </div>
+                        <div class="mb-4">
+                            <i class="fas fa-phone"></i>
+                            <h5>Phone</h5>
+                            <p class="lead mb-0">011-43584774</p>
+                            <!-- <p class="lead mb-0">Vipin Setya: +91-9810362527</p> -->
+                            <p class="lead mb-0">+91-8800422246</p>
+                        </div>
+                        <div class="mb-4">
+                            <i class="fas fa-envelope"></i>
+                            <h5>Email</h5>
+                            <p class="lead mb-0">hbdpharma@gmail.com</p>
+                        </div>
+                        <!-- <div class="mb-4">
+                            <i class="fas fa-clock"></i>
+                            <h5>Business Hours</h5>
+                            <p class="lead mb-0">Monday - Saturday: 9:00 AM - 6:00 PM</p>
+                            <p class="lead mb-0">Sunday: Closed</p>
+                        </div> -->
+                        <!-- <div>
+                            <i class="fas fa-share-alt"></i>
+                            <h5>Follow Us</h5>
+                            <div class="social-links">
+                                <a href="#" class="text-decoration-none me-3" style="color: var(--salem-700);">
+                                    <i class="fab fa-facebook fa-lg"></i>
+                                </a>
+                                <a href="#" class="text-decoration-none me-3" style="color: var(--salem-700);">
+                                    <i class="fab fa-twitter fa-lg"></i>
+                                </a>
+                                <a href="#" class="text-decoration-none me-3" style="color: var(--salem-700);">
+                                    <i class="fab fa-linkedin fa-lg"></i>
+                                </a>
+                                <a href="#" class="text-decoration-none" style="color: var(--salem-700);">
+                                    <i class="fab fa-instagram fa-lg"></i>
+                                </a>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
                 <!-- Contact Form -->
                 <div class="col-lg-7 d-flex">
                     <div class="contact-info-card h-100">
@@ -160,68 +216,19 @@
                         </form>
                     </div>
                 </div>
-
-                <!-- Contact Information -->
-                <div class="col-lg-5 d-flex">
-                    <div class="contact-info-card h-100">
-                        <h3 class="mb-4">Contact Information</h3>
-                        <div class="mb-4">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <h5>Address</h5>
-                            <p class="lead mb-0">1520/6, Jagsonpal Market,</p>
-                            <p class="lead mb-0">Bhagirath Palace, Chandni Chowk,</p>
-                            <p class="lead mb-0">Delhi- 110006</p>
-                        </div>
-                        <div class="mb-4">
-                            <i class="fas fa-phone"></i>
-                            <h5>Phone</h5>
-                            <p class="lead mb-0">General: 011-43584774</p>
-                            <!-- <p class="lead mb-0">Vipin Setya: +91-9810362527</p> -->
-                            <p class="lead mb-0">Anirrudh Setya: +91-8800422246</p>
-                        </div>
-                        <div class="mb-4">
-                            <i class="fas fa-envelope"></i>
-                            <h5>Email</h5>
-                            <p class="lead mb-0">hbdpharma@gmail.com</p>
-                        </div>
-                        <!-- <div class="mb-4">
-                            <i class="fas fa-clock"></i>
-                            <h5>Business Hours</h5>
-                            <p class="lead mb-0">Monday - Saturday: 9:00 AM - 6:00 PM</p>
-                            <p class="lead mb-0">Sunday: Closed</p>
-                        </div> -->
-                        <!-- <div>
-                            <i class="fas fa-share-alt"></i>
-                            <h5>Follow Us</h5>
-                            <div class="social-links">
-                                <a href="#" class="text-decoration-none me-3" style="color: var(--salem-700);">
-                                    <i class="fab fa-facebook fa-lg"></i>
-                                </a>
-                                <a href="#" class="text-decoration-none me-3" style="color: var(--salem-700);">
-                                    <i class="fab fa-twitter fa-lg"></i>
-                                </a>
-                                <a href="#" class="text-decoration-none me-3" style="color: var(--salem-700);">
-                                    <i class="fab fa-linkedin fa-lg"></i>
-                                </a>
-                                <a href="#" class="text-decoration-none" style="color: var(--salem-700);">
-                                    <i class="fab fa-instagram fa-lg"></i>
-                                </a>
-                            </div>
-                        </div> -->
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- Map Section -->
+    
     <section class="py-5 bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="map-container">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9024424303395!2d77.2276053!3d28.6519837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd37b741d057%3A0xcdee88e47393c3f1!2sBhagirath%20Palace%2C%20Chandni%20Chowk%2C%20Delhi%2C%20110006!5e0!3m2!1sen!2sin!4v1647881234567!5m2!1sen!2sin" 
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3501.0768582117!2d77.23174667550174!3d28.65741727565117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDM5JzI2LjciTiA3N8KwMTQnMDMuNiJF!5e0!3m2!1sen!2sin!4v1749446345544!5m2!1sen!2sin" 
                             width="100%" 
                             height="100%" 
                             style="border:0;" 
