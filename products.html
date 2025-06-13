@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products & Services - H.B.D. Pharma</title>
+    <title>Line Card - H.B.D. Pharma</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <style>
         :root {
             --salem-50: #effef6;
@@ -20,6 +19,101 @@
             --salem-800: #12693f;
             --salem-900: #115636;
             --salem-950: #03301c;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: var(--salem-800) !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--salem-700) !important;
+            font-weight: 500;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--salem-600) !important;
+        }
+
+        .navbar-nav .nav-link.active {
+            color: var(--salem-500) !important;
+        }
+
+        .section-title {
+            color: var(--salem-800);
+            border-bottom: 3px solid var(--salem-400);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .brand-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            height: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0.5rem;
+        }
+
+        .brand-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .brand-logo {
+            max-width: 130%;
+            height: auto;
+            max-height: 140px;
+            object-fit: contain;
+        }
+
+        .footer {
+            background-color: var(--salem-950);
+            color: var(--salem-100);
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--salem-50) 0%, var(--salem-100) 100%);
+            padding: 4rem 0 2rem;
+        }
+
+        .brands-page {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -0.5rem;
+        }
+
+        .brands-page .col-lg-3 {
+            padding: 0.5rem;
+        }
+
+        /* Pagination Styling */
+        .pagination .page-link {
+            color: var(--salem-700);
+            border-color: var(--salem-200);
+            background-color: white;
+        }
+
+        .pagination .page-link:hover {
+            color: var(--salem-600);
+            background-color: var(--salem-50);
+            border-color: var(--salem-300);
+        }
+
+        .pagination .page-item.active .page-link {
+            background-color: var(--salem-500);
+            border-color: var(--salem-500);
+            color: white;
+        }
+
+        .pagination .page-item.active .page-link:hover {
+            background-color: var(--salem-600);
+            border-color: var(--salem-600);
+            color: white;
         }
 
         .product-section {
@@ -36,7 +130,6 @@
             margin-bottom: 1rem;
         }
 
-        /* New style for product images within product sections */
         .product-section img {
             max-width: 80%;
             height: auto;
@@ -44,35 +137,6 @@
             margin: 0 auto;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        /* Hero Section Styles */
-        .hero-section {
-            position: relative;
-            background-color: var(--salem-50);
-            min-height: 30vh;
-            display: flex;
-            align-items: center;
-            padding: 2rem 0;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--salem-800);
-        }
-
-        .hero-subtitle {
-            font-size: 1.25rem;
-            font-weight: 400;
-            margin-bottom: 1.5rem;
-            color: var(--salem-950);
         }
     </style>
 </head>
@@ -100,16 +164,16 @@
     <section class="hero-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-10 mx-auto text-center hero-content">
-                    <h1 class="hero-title">Products & Services</h1>
-                    <p class="hero-subtitle">Delivering Excellence in Healthcare Solutions</p>
-                    <!-- <div class="mt-4">
-                        <p class="lead" style="color: var(--salem-950);"></p>
-                    </div> -->
+                <div class="col-12 text-center">
+                    <h1 class="display-4 fw-bold mb-4" style="color: var(--salem-800);">Our Products & Services</h1>
+                    <p class="lead mb-0">We are committed to delivering excellence
+                        through innovative and reliable healthcare solutions
+                        that enhance patient outcomes and well-being</p>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Introduction Section -->
     <section class="py-5">
