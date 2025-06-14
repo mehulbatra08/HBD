@@ -142,7 +142,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h1 class="display-4 fw-bold mb-4" style="color: var(--salem-800);">Our Partner Brands</h1>
+                    <h1 class="display-4 fw-bold mb-4" style="color: var(--salem-800);">Through Authorized Distributors</h1>
                     <p class="lead mb-0">We are proud to be associated with leading pharmaceutical companies, ensuring the highest quality healthcare products for our customers.</p>
                 </div>
             </div>
@@ -286,7 +286,7 @@
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="brand-card">
-                            <img src="images/logos/Merck_&_Co.png" alt="Merck & Co" class="brand-logo">
+                            <img src="images/logos/piramal.png" alt="pirmal" class="brand-logo">
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6">
@@ -479,41 +479,48 @@
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="brand-card">
-                            <img src="images/logos/aurobindo.png" alt="Zuventis" class="brand-logo">
+                            <img src="images/logos/aurobindo.png" alt="Aurobindo" class="brand-logo">
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="brand-card">
-                            <img src="images/logos/biocon.png" alt="Zuventis" class="brand-logo">
+                            <img src="images/logos/ajanta.png" alt="Ajanta" class="brand-logo">
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="brand-card">
-                            <img src="images/logos/Care_Formulation_Labs.png" alt="Zuventis" class="brand-logo">
+                            <img src="images/logos/Care_Formulation_Labs.png" alt="Care_Formulation_Labs" class="brand-logo">
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="brand-card">
-                            <img src="images/logos/Get_Well.png" alt="Zuventis" class="brand-logo">
+                            <img src="images/logos/Get_Well.png" alt="Get_Well" class="brand-logo">
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="brand-card">
-                            <img src="images/logos/Jubliant.png" alt="Zuventis" class="brand-logo">
+                            <img src="images/logos/Jubliant.png" alt="Jubliant" class="brand-logo">
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="brand-card">
-                            <img src="images/logos/Merck.png" alt="Zuventis" class="brand-logo">
+                            <img src="images/logos/Merck.png" alt="Merck" class="brand-logo">
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="brand-card">
-                            <img src="images/logos/Pinnacle.png" alt="Zuventis" class="brand-logo">
+                            <img src="images/logos/Pinnacle.png" alt="Pinnacle" class="brand-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="h-100 d-flex flex-column justify-content-end align-items-center" style="min-height: 200px;">
+                            <p class="fst-italic fw-bold text-muted mb-3" style="font-size: 1.6rem;">And More...</p>
                         </div>
                     </div>
                 </div>
             </div>
+
+
 
             <!-- Pagination -->
             <div class="row mt-5">
@@ -606,6 +613,12 @@
                     if (link.getAttribute('data-page') === pageNumber.toString()) {
                         link.parentElement.classList.add('active');
                     }
+                });
+
+                // Scroll to top of the page smoothly
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
                 });
             }
             
